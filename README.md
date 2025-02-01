@@ -1,2 +1,2 @@
 # Hooshyar_Bootcamp_Beginner
-Rpository for my journy of this bootcamp 
+Welcome to my GitHub repository documenting my journey through this bootcamp!
