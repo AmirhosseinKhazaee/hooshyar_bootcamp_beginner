@@ -1,0 +1,63 @@
+[
+    {
+      "input": {
+        "refractive_error": "myopia",
+        "object_distance_cm": 50,
+        "refractive_index": 1.5
+      },
+      "output": {
+        "lens_power_diopters": 2,
+        "focal_length_cm": 50,
+        "radius_of_curvature_m": 0.67
+      }
+    },
+    {
+      "input": {
+        "refractive_error": "hyperopia",
+        "object_distance_cm": 20,
+        "refractive_index": 1.6
+      },
+      "output": {
+        "lens_power_diopters": 5,
+        "focal_length_cm": 20,
+        "radius_of_curvature_m": 0.4
+      }
+    },
+    {
+      "input": {
+        "refractive_error": "myopia",
+        "object_distance_cm": 100,
+        "refractive_index": 1.5
+      },
+      "output": {
+        "lens_power_diopters": 1,
+        "focal_length_cm": 100,
+        "radius_of_curvature_m": 1.33
+      }
+    },
+    {
+      "input": {
+        "refractive_error": "hyperopia",
+        "object_distance_cm": 15,
+        "refractive_index": 1.5
+      },
+      "output": {
+        "lens_power_diopters": 6.67,
+        "focal_length_cm": 15,
+        "radius_of_curvature_m": 0.3
+      }
+    },
+    {
+      "input": {
+        "refractive_error": "myopia",
+        "object_distance_cm": 75,
+        "refractive_index": 1.6
+      },
+      "output": {
+        "lens_power_diopters": 1.33,
+        "focal_length_cm": 75,
+        "radius_of_curvature_m": 0.3
+      }
+    }
+  ]
+  
