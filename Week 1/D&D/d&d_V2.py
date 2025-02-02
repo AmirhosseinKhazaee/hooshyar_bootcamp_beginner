@@ -23,12 +23,12 @@ class Board:
             self.player = self.places()
             self.dungeon = self.places()
             self.dragon = self.places()
-            self.map_location = self.places()  # Add map location
+            self.map_location = self.places()  
             if self.player != self.dungeon and self.dungeon != self.dragon and self.dragon != self.player and self.map_location != self.player and self.map_location != self.dungeon and self.map_location != self.dragon:
                 break       
         self.row_p,self.col_p =self.player 
         self.row_d,self.col_d =self.dragon 
-        self.row_m,self.col_m =self.map_location  # Add map location
+        self.row_m,self.col_m =self.map_location 
 
     def board_creator(self):
         for row in range(1,self._row_scale+1):
@@ -37,7 +37,7 @@ class Board:
                 self.board[row] = {}
             for column in range(1,self._col_scale+1):  
                 self.board[row][column] = "_" 
-        self.board[self.row_m][self.col_m] = "M"  # Place the map on the board
+        self.board[self.row_m][self.col_m] = "M" 
                         
     def board_printer(self):
         self.board[self.row_p][self.col_p] = "X"
@@ -50,7 +50,7 @@ class Board:
             self.show_dragon = False
         self.board[self.dragon[0]][self.dragon[1]] = "D" if self.show_dragon else "_"
         
-        # Show the map if the player is within 2 cells of the map location
+
         map_dist = abs(int(self.row_m) - int(self.row_p)) + abs(self.col_m - self.col_p)
         if map_dist <= 2:
             self.board[self.row_m][self.col_m] = "M"
@@ -71,7 +71,7 @@ class Board:
         if (self.row_p, self.col_p) == (self.row_m, self.col_m):
             input(f"You found a map! It says: What is that animal that have {self.dungeon[0]} legs and {self.dungeon[1]} eyes? : say anythong for continue!")
     def dragon_move(self):
-            self.board[self.row_d][self.col_d] = "_"  # Clear the previous position of the dragon
+            self.board[self.row_d][self.col_d] = "_"  
             if self.row_dist > self.col_dist:
                 if int(self.row_d) > int(self.row_p) and self.row_d != "1":
                     self.row_d = str(int(self.row_d) - 1)
@@ -83,7 +83,7 @@ class Board:
                 elif self.col_d < self.col_p and self.col_d != self._col_scale:
                     self.col_d += 1
             self.board[self.row_d][self.col_d] = "D"
-            self.dragon = (self.row_d, self.col_d)  # Update dragon's position
+            self.dragon = (self.row_d, self.col_d)  
 
     def dragon_senses(self):
         distance = abs(int(self.row_d) - int(self.row_p)) + abs(self.col_d - self.col_p)
